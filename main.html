@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Arslan-MD Sessions | Ultra Pro Max</title>
+  <title>SGXMAFIA-MD Sessions | Ultra Pro Max</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -404,6 +404,366 @@
       border-radius: 12px;
       cursor: pointer;
       font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: var(--neon-cyan);
+      text-shadow: 0 0 10px var(--neon-cyan);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 1em 1.5em;
+    }
+
+    .btn::before, .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 255, 204, 0.4), transparent);
+      transition: all 0.6s ease;
+    }
+
+    .btn::after {
+      left: 100%;
+      transition-delay: 0.2s;
+    }
+
+    .btn:hover::before {
+      left: 100%;
+    }
+
+    .btn:hover::after {
+      left: -100%;
+    }
+
+    .btn:hover {
+      background: rgba(0, 255, 204, 0.15);
+      box-shadow: 
+        0 0 25px rgba(0, 255, 204, 0.7),
+        inset 0 0 15px rgba(0, 255, 204, 0.2);
+      color: #fff;
+      border-color: #fff;
+      transform: translateY(-3px);
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+      filter: brightness(1.2);
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 60px;
+      padding: 30px;
+      background: var(--card-bg);
+      border: 2px solid var(--neon-cyan);
+      border-radius: 15px;
+      text-align: center;
+      color: var(--neon-cyan);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      text-shadow: 0 0 10px var(--neon-cyan);
+      width: 100%;
+      backdrop-filter: blur(10px);
+    }
+
+    .footer b {
+      color: var(--neon-pink);
+      text-shadow: 0 0 10px rgba(255, 46, 99, 0.5);
+    }
+
+    .footer .social-links {
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer .social-links a {
+      color: var(--neon-cyan);
+      font-size: 2rem;
+      transition: all 0.4s ease;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 2px solid var(--neon-cyan);
+      box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+      margin: 0 auto;
+    }
+
+    .footer .social-links a:hover {
+      color: var(--neon-pink);
+      text-shadow: 0 0 15px var(--neon-pink);
+      border-color: var(--neon-pink);
+      box-shadow: 0 0 25px rgba(255, 46, 99, 0.7);
+      transform: translateY(-5px) scale(1.1);
+    }
+
+    /* Animations */
+    @keyframes shine {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+        margin-top: 100px;
+        gap: 40px;
+      }
+
+      .news-container .title {
+        width: 50%;
+        font-size: 0.9rem;
+        padding: 10px 15px;
+      }
+
+      .news-container .ticker {
+        margin-left: 50%;
+      }
+
+      .news-container ul li {
+        font-size: 0.9rem;
+        padding: 0 20px;
+      }
+
+      .hero {
+        padding: 40px 20px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .feature-card {
+        padding: 25px;
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+      }
+
+      .about, .contact {
+        padding: 30px 20px;
+      }
+
+      .about h2, .contact h2 {
+        font-size: 2rem;
+      }
+
+      .about p, .contact p {
+        font-size: 1.1rem;
+      }
+
+      .profile-container {
+        width: 160px;
+        height: 160px;
+      }
+
+      .footer .social-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .footer .social-links a {
+        width: 60px;
+        height: 60px;
+        font-size: 1.7rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      
+      .profile-container {
+        width: 140px;
+        height: 140px;
+      }
+      
+      .btn {
+        font-size: 1rem;
+        padding: 0.9em 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Advanced Particle Background -->
+  <div id="particles-js"></div>
+  <div class="cyber-grid"></div>
+
+  <!-- Enhanced News Ticker -->
+  <div class="news-container">
+    <div class="title">🚀 SGXMAFIA-MD Ultra Pro Max</div>
+    <div class="ticker">
+      <ul>
+        <li>Welcome to the Ultimate Session Experience!</li>
+        <li>Get your QR Codes & Pairing Codes Instantly</li>
+        <li>DSF CREW DEVS - Premium Quality</li>
+        <li>Advanced Security & Lightning Fast Performance</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- 3D Profile Section -->
+    <div class="profile-section">
+      <div class="profile-container">
+        <div class="profile-border"></div>
+        <img src="https://files.catbox.moe/2jjhqj.jpg" alt="SGXMAFIA-MD" class="profile-image">
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>SG PLAYER X MAX SESSIONS</h1>
+      <p>Experience the next generation of WhatsApp bot sessions. Get your QR or pair code, deploy SGXMAFIA-MD with advanced features, and join the elite tech community!</p>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features">
+      <div class="feature-card">
+        <h3><i class="fas fa-qrcode"></i> QR Code Pairing</h3>
+        <p>Advanced QR code system with instant scanning and secure session ID generation. Lightning fast connection with enhanced security protocols.</p>
+        <button onclick="window.location.href='/qr'" class="btn">Get Premium QR</button>
+      </div>
+      <div class="feature-card">
+        <h3><i class="fas fa-key"></i> Pair Code System</h3>
+        <p>Enter your number and receive an encrypted pairing code. No scanning required. Advanced encryption ensures maximum security.</p>
+        <button onclick="window.location.href='/pair'" class="btn">Generate Code</button>
+      </div>
+      <div class="feature-card">
+        <h3><i class="fas fa-rocket"></i> Deploy SGXMAFIA</h3>
+        <p>One-click deployment with advanced features. Get your own bot running in minutes with premium functionality and 24/7 support.</p>
+        <button onclick="window.location.href=''https://github.com/shahzebyc3/SG-X-MAFIA-MD" class="btn">Deploy Now</button>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about">
+      <h2>About Ultra Pro Max</h2>
+      <p>We're revolutionizing the WhatsApp bot experience with cutting-edge technology. Our Ultra Pro Max version delivers unprecedented performance, security, and features. Join thousands of satisfied users who have upgraded to the premium SGXMAFIA  experience.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact">
+      <h2>Elite Support</h2>
+      <p>Our premium support team is available 24/7 to assist you with any issues. Contact us via SMS, WhatsApp, or Telegram for instant assistance with deployment, troubleshooting, or custom requests.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>© 2026 SG PLAYER X HACKER Tech | Ultra Pro Max Edition</p>
+    <p>Contact <b>SG PLAYER X Official</b> for Premium Support</p>
+    <div class="social-links">
+      <a href="https://youtube.com/@sgmovie.hub55?si=tU1dGo7CX4vjCqby" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/shahzebkhan217?igsh=enF0ZnpuN2xqc2I2" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://t.me/shahzeblyc3" target="_blank"><i class="fab fa-telegram"></i></a>
+      <a href="t.me/shahzeblyc3" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </div>
+
+  <!-- Particle.js -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    // Advanced particle configuration
+    particlesJS('particles-js', {
+      particles: {
+        number: { value: 120, density: { enable: true, value_area: 800 } },
+        color: { value: ["#00ffcc", "#ff2e63", "#7209b7", "#4361ee"] },
+        shape: { 
+          type: ["circle", "triangle", "polygon"],
+          polygon: { nb_sides: 6 }
+        },
+        opacity: { 
+          value: 0.7, 
+          random: true,
+          anim: { enable: true, speed: 1, opacity_min: 0.2, sync: false }
+        },
+        size: { 
+          value: 3, 
+          random: true,
+          anim: { enable: true, speed: 4, size_min: 0.3, sync: false }
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00ffcc",
+          opacity: 0.4,
+          width: 1.5
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: { enable: true, rotateX: 600, rotateY: 1200 }
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "repulse" },
+          onclick: { enable: true, mode: "push" },
+          resize: true
+        },
+        modes: {
+          repulse: { distance: 100, duration: 0.4 },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
+    // Add scroll animations
+    document.addEventListener('DOMContentLoaded', function() {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            mily: 'Orbitron', sans-serif;
       font-size: 1.2rem;
       text-transform: uppercase;
       color: var(--neon-cyan);
